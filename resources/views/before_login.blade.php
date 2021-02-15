@@ -18,17 +18,17 @@
             <span class="before_login_subtitle">高級肉専門 ショッピングサイト</span>
         </div>
 
-        <div class="row justify-content-center mt-5 mb-5">
+        <div class="login-link row justify-content-center mt-5">
             <div class="col-3 text-center">
                 <h4>まだアカウントを<br>お持ちでない方はこちら</h4>
                 <div class="mt-5">
-                {!! link_to_route('signup', '新規登録', [], ['class' => 'btn btn-primary btn-lg']) !!}
+                {!! link_to_route('signup', '新規登録', [], ['class' => 'btn btn-border']) !!}
                 </div>
             </div>
             <div class="col-3 text-center">
                 <h4>すでにアカウントを<br>お持ちの方はこちら</h4>
                 <div class="mt-5">
-                {!! link_to_route('login', 'ログイン', [], ['class' => 'btn btn-primary btn-lg']) !!}
+                {!! link_to_route('login', 'ログイン', [], ['class' => 'btn btn-border']) !!}
                 </div>
             </div>
         </div>

@@ -48,7 +48,7 @@
 		<div class="productTable">
 			<p>全{{ $products->count() }}件</p>
 			<table class="table table-hover">
-				<thead style="background-color: #ffd900">
+				<thead style="background-color: #bbb9b9">
 					<tr>
 						<th style="width:50%">商品名</th>
 						<th>商品カテゴリ</th>

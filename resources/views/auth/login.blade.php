@@ -38,8 +38,8 @@
                     @endif
                 </div>
 
-                <div class="text-center">
-                    {!! Form::submit('ログイン', ['class' => 'btn btn-primary']) !!}
+                <div class="text-center mt-5 mb-2">
+                    {!! Form::submit('ログイン', ['class' => 'btn btn-primary btn-lg']) !!}
                 </div>
 
                 <div class="text-center mt-3">

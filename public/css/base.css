@@ -7,7 +7,7 @@
     body {
         margin: 0;
         padding: 0;
-        font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: serif, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial;
     }
     /******全体のデザイン******/
     .all {
@@ -175,7 +175,6 @@
 
     .before_login_left{
         float: left;
-        /* background-color: yellow; */
         width: 50%;
         height: 500px;
     }
@@ -202,4 +201,26 @@
         font-family: serif;
     }
 
+    .login-link{
+        height: 300px;
+    }
 
+    .btn-border {
+        display: inline-block;
+        width: 200px;
+        text-align: center;
+        border: 2px solid #007bff;
+        font-size: 16px;
+        color: #007bff;
+        text-decoration: none;
+        font-weight: bold;
+        padding: 8px 16px;
+        border-radius: 4px;
+        transition: .4s;
+    }
+    
+    .btn-border:hover {
+        background-color: #007bff;
+        border-color: #007bff;
+        color: #FFF;
+    }
