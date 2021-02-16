@@ -166,7 +166,7 @@
         line-height: 15px !important;
     }
 
-    /****before_login*****/
+    /**--------------------before_login---------------------*/
     .before_login_top{
         width: 100%;
         height: 600px;
@@ -202,7 +202,7 @@
     }
 
     .login-link{
-        height: 300px;
+        height: 250px;
     }
 
     .btn-border {
@@ -223,4 +223,45 @@
         background-color: #007bff;
         border-color: #007bff;
         color: #FFF;
+    }
+
+    .before_login_photo{
+        width: 100%;
+        height: 100%;
+    }
+
+    .before_login_concept{
+        margin: 0 auto;
+        text-align: center;
+        color: #424242;
+        font-size: 36px;
+        font-weight: bold;
+        border-bottom: solid 4px #424242;
+    }
+
+    .before_login_concept_text{
+        letter-spacing: 0.2em;
+        line-height: 1.7em;
+        text-align: justify;
+    }
+
+/**--------------------home---------------------*/
+
+    .home_logo{
+        display: inline-block;
+        width: 300px;
+        height: 300px;
+        margin-left: 150px;
+        box-shadow: 15px 15px 15px;
+        border:1px solid #000;
+    }  
+
+    .home-right{
+        height: 300px;
+    }
+
+    .home-button{
+        margin-top: 70px;
+        width: 300px !important;
+        
     }
