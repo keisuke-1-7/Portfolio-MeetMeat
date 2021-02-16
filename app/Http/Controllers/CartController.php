@@ -121,7 +121,7 @@ class CartController extends Controller
         $cartData = $request->session()->get('cartData');
 
         if (!empty($cartData)) {
-            return redirect()->route('cartlist.index');
+            return redirect()->route('cartlist');
         } else {
             $user = Auth::user();
             return view('no_cart_list', compact('user'));

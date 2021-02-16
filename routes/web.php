@@ -117,3 +117,10 @@ Route::get('noCartList', function () {
 })->name('noCart');
 
 Route::get('checkout', 'CartController@checkout')->name('checkout');
+
+/*
+|-----------------------------------------------------------------
+| Stripe決済機能
+|-----------------------------------------------------------------
+*/
+Route::post('/charge', 'ChargeController@charge');

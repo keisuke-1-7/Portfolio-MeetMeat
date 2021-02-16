@@ -37,7 +37,7 @@
             Concept
         </div>
 
-        <div class="container justify-content-center" >
+        <div class="container justify-content-center before_login_container" >
             <div class="row mt-5 mb-5">
                 <div class="col-md-6">
                     <div class="">

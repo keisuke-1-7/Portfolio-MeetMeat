@@ -99,9 +99,26 @@
                         <button class="btn btn-info mx-3">
                             {!! link_to_route('show', '買い物を続ける', [], ['class' => 'text-white d-inline']) !!}
                         </button>
-                        <button class="btn btn-primary mx-3">
-                            {!! link_to_route('checkout', '注文を確定する', [], ['class' => 'text-white d-inline']) !!}
-                        </button>
+                        <div class="content">
+                            <form action="{{ asset('charge') }}" method="POST">
+                                {{ csrf_field() }}
+                                        <script
+                                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                                                data-key="{{ env('STRIPE_KEY') }}"
+                                                data-amount={{ $totalPrice }}
+                                                data-name="Stripe Demo"
+                                                data-label="注文を確定する"
+                                                data-description="Online course about integrating Stripe"
+                                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+                                                data-locale="auto"
+                                                data-currency="JPY">
+                                        </script>
+                                        <script>
+                                            document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+                                        </script>
+                                        <button type="submit" class="btn btn-primary mx-3">注文を確定する</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
