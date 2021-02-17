@@ -4,7 +4,7 @@
         <a href="/">MeetMeat</a>
     </h1>
     @if (Auth::check())
-        <p>{{ !empty(Auth::user()) ? Auth::user()->last_name . Auth::user()->first_name : 'ユーザー' }} さん</p>
+        <p class="header-user-name">{{ !empty(Auth::user()) ? Auth::user()->last_name . Auth::user()->first_name : 'ユーザー' }} さん</p>
         <nav>
             <ul>
                 <li class="nav-item">{!! link_to_route('show', '商品検索', [], ['class' => 'nav-link']) !!}</li>

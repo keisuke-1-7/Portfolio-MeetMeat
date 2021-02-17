@@ -47,11 +47,12 @@
             <div class="productTable">
             
             <table class="table table-hover">
-                <thead class="text-white bg-dark">
+                <thead class="text-white search-table-color">
                     <tr>
                         <th>商品名</th>
                         <th>商品カテゴリ</th>
                         <th>価格</th>
+                        <th></th>
                     </tr>
                 </thead>
                 @foreach($products as $product)

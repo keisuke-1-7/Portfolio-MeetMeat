@@ -70,6 +70,10 @@
         margin: 0 0 0 auto;
     }
 
+    .header-user-name{
+        color: white;
+    }
+
     .header_logo{
         display: inline-block;
         width: 50px;
@@ -107,7 +111,7 @@
         background-color: #ffd900;
     }
 
-    /****フッター*******/
+    /*---------------------フッター----------------------*/
     footer {
         width: 100%;
         padding: 5px 10px;
