@@ -74,6 +74,6 @@ return [
         'saleStatusId' => '販売状態',
         'productStatusId' => '商品状態',
         'description' => '商品説明',
-        'password'=>'パスワード'
+        'password'=>'パスワード',
     ],
 ];

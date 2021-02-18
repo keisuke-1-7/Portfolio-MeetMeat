@@ -30,6 +30,15 @@ class CreateProductRequest extends FormRequest
             'saleStatusId' => 'required|numeric|exists:m_sales_statuses,id',
             'productStatusId' => 'required|numeric|exists:m_products_statuses,id',
             'description' => 'required|string|max:191',
+            'product_image' => 'required|image',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            "required" => "必須項目です。",
+            "image" => "指定されたファイルが画像(jpg、png、bmp、gif、svg)ではありません。",
         ];
     }
 }
