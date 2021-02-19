@@ -11,7 +11,6 @@ use App\MSalesStatus;
 use App\MProductStatus;
 use App\Http\Requests\CreateProductRequest;
 
-
 class BackProductController extends Controller
 {
     /**
@@ -54,12 +53,24 @@ class BackProductController extends Controller
      */
     public function store(CreateProductRequest $request)
     {
+        $this->validate($request, CreateProductRequest::rules());
+        $productImage = $request->product_image;
+        if ($productImage) {
+            //画像ファイルの名前がかぶらないようにタイムスタンプで一意のファイル名を取得する(今回は使用しない)
+            // $fileName = time() . $productImage->getClientOriginalName();
+            //上記の代わりに一意のファイル名を自動生成しつつ保存し、かつファイルパス（$productImagePath）を生成
+            $productImagePath = $productImage->store('public/uploads');
 
+        } else {
+            $productImagePath = "";
+        }
+        
         $user = Auth::user();
         if ($user->id) {
             $userId = $user->id;
         }
-        if ($userId) {
+        //userIdとfileNameが存在すれば以下の項目をMOroductテーブルに保存
+        if ($userId && $productImage) {
             $data = [
                 'product_name'      => $request->productName,
                 'category_id'       => $request->categoryId,
@@ -69,6 +80,7 @@ class BackProductController extends Controller
                 'description'       => $request->description,
                 'user_id'           => $userId,
                 'resist_date'       => date('Y-m-d H:i:s'),
+                'product_image'     => $productImagePath,
                 'delete_flag'       => '',
             ];
             $result = MProduct::create($data);

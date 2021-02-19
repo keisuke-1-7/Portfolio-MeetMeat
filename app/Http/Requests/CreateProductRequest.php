@@ -21,7 +21,7 @@ class CreateProductRequest extends FormRequest
      *
      * @return array
      */
-    public function rules()
+    public static function rules()
     {
         return [
             'productName' => 'required|string|max:20',
@@ -30,7 +30,7 @@ class CreateProductRequest extends FormRequest
             'saleStatusId' => 'required|numeric|exists:m_sales_statuses,id',
             'productStatusId' => 'required|numeric|exists:m_products_statuses,id',
             'description' => 'required|string|max:191',
-            'product_image' => 'required|image',
+            'product_image' => 'required|file|mimes:jpg,svg,png,JPEG',
         ];
     }
 

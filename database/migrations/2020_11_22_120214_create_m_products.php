@@ -21,7 +21,7 @@ class CreateMProducts extends Migration
             $table->integer('sale_status_id')->unsigned();
             $table->integer('product_status_id')->unsigned();
             $table->string('description', 256);
-            $table->string('product_image')->comment('名前');
+            $table->string('product_image');
             $table->timestamp('resist_date');
             $table->integer('user_id')->unsigned();
             $table->char('delete_flag', 1);
