@@ -19,10 +19,12 @@ class ChargeController extends Controller
                 'email' => $request->stripeEmail,
                 'source' => $request->stripeToken
             ));
-
+            
+            $totalPrice = $request->totalPrice;
+            
             $charge = Charge::create(array(
                 'customer' => $customer->id,
-                'amount' => 1000,
+                'amount' => $totalPrice,
                 'currency' => 'jpy'
             ));
 

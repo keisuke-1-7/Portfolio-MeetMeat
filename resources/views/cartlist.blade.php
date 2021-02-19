@@ -101,11 +101,12 @@
                         </button>
                         <div class="content">
                             <form action="{{ asset('charge') }}" method="POST">
+                                <input type="hidden" name="totalPrice" value={{$totalPrice}}>
                                 {{ csrf_field() }}
                                         <script
                                                 src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                                                 data-key="{{ env('STRIPE_KEY') }}"
-                                                data-amount={{ $totalPrice }}
+                                                data-amount = {{ $totalPrice }}
                                                 data-name="Stripe Demo"
                                                 data-label="注文を確定する"
                                                 data-description="Online course about integrating Stripe"
