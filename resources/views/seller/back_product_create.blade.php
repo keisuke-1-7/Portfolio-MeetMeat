@@ -18,7 +18,7 @@
     </div>
     <div class="row mt-5 mb-5">
         <div class="col-sm-5 mx-auto">
-            {!! Form::open(['route' => 'back_product_store', 'files' => 'true', 'enctype'=>'multipart/form-data']) !!}
+            {!! Form::open(['route' => 'back_product_store', 'enctype'=>'multipart/form-data']) !!}
                 <div class="form-group-sm">
                     {!! Form::label('productName', '商品名', ['class' => 'mt-2 mb-0']) !!}
                     <div class="pl-3">

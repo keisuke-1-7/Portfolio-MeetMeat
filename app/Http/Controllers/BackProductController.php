@@ -60,7 +60,6 @@ class BackProductController extends Controller
             // $fileName = time() . $productImage->getClientOriginalName();
             //上記の代わりに一意のファイル名を自動生成しつつ保存し、かつファイルパス（$productImagePath）を生成
             $productImagePath = $productImage->store('public/uploads');
-
         } else {
             $productImagePath = "";
         }
@@ -69,7 +68,7 @@ class BackProductController extends Controller
         if ($user->id) {
             $userId = $user->id;
         }
-        //userIdとfileNameが存在すれば以下の項目をMOroductテーブルに保存
+        //userIdとproductImageが存在すれば以下の項目をMProductテーブルに保存
         if ($userId && $productImage) {
             $data = [
                 'product_name'      => $request->productName,
@@ -156,14 +155,27 @@ class BackProductController extends Controller
      */
     public function update(CreateProductRequest $request, $id)
     {
+        $this->validate($request, CreateProductRequest::rules());
+        $productImage = $request->product_image;
+        
+        if ($productImage) {
+            //画像ファイルの名前がかぶらないようにタイムスタンプで一意のファイル名を取得する(今回は使用しない)
+            // $fileName = time() . $productImage->getClientOriginalName();
+            //上記の代わりに一意のファイル名を自動生成しつつ保存し、かつファイルパス（$productImagePath）を生成
+            $productImagePath = $productImage->store('public/uploads');
+        } else {
+            $productImagePath = "";
+        }
+        
         $product = MProduct::with(['category', 'saleStatus', 'productStatus'])->find($id);
-
+        
         $product->product_name = $request->productName;
         $product->category_id = $request->categoryId;
         $product->price = $request->price;
         $product->sale_status_id = $request->saleStatusId;
         $product->product_status_id = $request->productStatusId;
         $product->description = $request->description;
+        $product->product_image = $productImagePath;
         $product->save();
 
         return redirect('seller/items');
