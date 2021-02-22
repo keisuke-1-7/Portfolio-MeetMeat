@@ -13,11 +13,31 @@ class M_CategoriesSeeder extends Seeder
     {
         DB::table('m_categories')->insert([
             'id' => 1,
-            'category_name' => '肉類',
-         ]);
+            'category_name' => 'ロース',
+        ]);
         DB::table('m_categories')->insert([
             'id' => 2,
-            'category_name' => '魚介類',
-         ]);
+            'category_name' => 'ヒレ',
+        ]);
+        DB::table('m_categories')->insert([
+            'id' => 3,
+            'category_name' => 'タン',
+        ]);
+        DB::table('m_categories')->insert([
+            'id' => 4,
+            'category_name' => 'バラ',
+        ]);
+        DB::table('m_categories')->insert([
+            'id' => 5,
+            'category_name' => 'モモ',
+        ]);
+        DB::table('m_categories')->insert([
+            'id' => 6,
+            'category_name' => 'サーロイン',
+        ]);
+        DB::table('m_categories')->insert([
+            'id' => 7,
+            'category_name' => 'その他',
+        ]);
     }
 }
