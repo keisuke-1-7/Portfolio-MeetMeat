@@ -125,7 +125,7 @@
         width: 100%;
         padding: 5px 10px;
         background-color: #684213;
-        position: fixed;
+        position: relative;
         bottom: 0;
         color: #f0eeee;
         z-index: 1000;
