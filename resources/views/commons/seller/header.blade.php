@@ -2,7 +2,7 @@
     <img class="header_logo" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
     <h1>
         <a href="/">MeetMeat
-        <span class="header_title d-inline">出品者用ページ</span>
+        <span class="header_title d-inline">管理者用ページ</span>
         </a>
         
     </h1>
