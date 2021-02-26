@@ -41,5 +41,10 @@ class AppServiceProvider extends ServiceProvider
                 || $user->user_classification_id == config('const.USER_CLASSIFICATIONS.ADMIN')
             );
         });
+
+        // 本番環境(Heroku)でhttpsを強制する
+        if (\App::environment('production')) {
+            \URL::forceScheme('https');
+        }
     }
 }
