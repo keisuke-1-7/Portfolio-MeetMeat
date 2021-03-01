@@ -51,8 +51,7 @@ class OrderController extends Controller
             'showAllBtn'       => $showAllBtn,
             'deleteResult'     => $deleteResult,
             'termFlg'          => $termFlg,
-            'pageFrom'         => $pageFrom, // 画面に表示する履歴の開始番号
-            'user'             => $user
+            'pageFrom'         => $pageFrom // 画面に表示する履歴の開始番号
         ];
         return view('order.order_history', $data);
     }
