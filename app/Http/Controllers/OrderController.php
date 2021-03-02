@@ -38,6 +38,7 @@ class OrderController extends Controller
         // ログイン中のユーザー情報取得
         $user = Auth::user();
         // 履歴一覧データの取得
+        dd($user);
         if ($user->id) {
             $orderHistoryData = TOrder::getBaseOrder($user->id, $maxCountPerPage, $termFlg['term']);
         }
@@ -53,7 +54,6 @@ class OrderController extends Controller
             'termFlg'          => $termFlg,
             'pageFrom'         => $pageFrom // 画面に表示する履歴の開始番号
         ];
-        dd($orderHistoryData);
         return view('order.order_history', $data);
     }
 
