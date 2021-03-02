@@ -14,7 +14,6 @@ class OrderController extends Controller
     public function showOrderHistory(Request $request)
     {
         // 初期値
-        dd($request);
         $data = [];
         $termFlg = array(
                             'term' => false,
