@@ -74,7 +74,7 @@ class CartController extends Controller
             $user = Auth::user();
 
             //Productテーブルに該当IDが存在しない場合、戻り値としてnullが返される → issetで条件分岐を指定し例外処理を行う
-            return view('cartlist', compact('sessionUsers', 'cartData', 'user'));
+            return view('cartlist', compact('sessionUsers', 'cartData', 'totalPrice', 'user'));
         } else {
             $user = Auth::user();
             return view('no_cart_list', compact('user'));
