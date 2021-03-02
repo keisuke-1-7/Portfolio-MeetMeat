@@ -39,9 +39,8 @@ class OrderController extends Controller
         $user = Auth::user();
         // 履歴一覧データの取得
         if ($user->id) {
-            $orderHistoryData = TOrder::getBaseOrder($user->id, $maxCountPerPage, $termFlg['term']);
+            $orderHistoryData = TOrder::getBaseOrder($user->id, $maxCountPerPage, $termFlg = false);
         }
-        dd($user);
         // 3ヶ月or全件 表示ボタン出しわけ
         if ($termFlg['term']) {
             $showAllBtn = true;
