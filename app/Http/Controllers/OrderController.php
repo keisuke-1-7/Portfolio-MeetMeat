@@ -14,6 +14,7 @@ class OrderController extends Controller
     public function showOrderHistory(Request $request)
     {
         // 初期値
+        dd($request);
         $data = [];
         $termFlg = array(
                             'term' => false,
@@ -39,7 +40,7 @@ class OrderController extends Controller
         $user = Auth::user();
         // 履歴一覧データの取得
         if ($user->id) {
-            $orderHistoryData = TOrder::getBaseOrder($user->id, $maxCountPerPage, $termFlg = false);
+            $orderHistoryData = TOrder::getBaseOrder($user->id, $maxCountPerPage, $termFlg['term']);
         }
         // 3ヶ月or全件 表示ボタン出しわけ
         if ($termFlg['term']) {

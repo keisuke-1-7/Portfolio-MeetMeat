@@ -104,10 +104,10 @@ class TOrder extends Model
                 // 発送状態はCASE文で3だったら発送済それ以外は準備中
                 DB::raw("CASE WHEN detail.shipment_status_id = 3 THEN '発送済' ELSE '準備中' END AS shipment_status")
             )
-            ->where('base.user_id', ':user_id')
+            ->where('base.user_id', 'user_id')
             //期間指定フラグがtrueだったら期間指定する
             ->when($termFlg, function ($query, $termFlg) {
-                return $query->whereBetween('order_date', [':termFrom', ':termTo']);
+                return $query->whereBetween('order_date', ['termFrom', 'termTo']);
             })
             // 注文番号ごとにまとめる -> 1注文IDあたりに同じ注文番号の伝票(detail)が複数紐づく想定(detailに枝番を設ける際はハイフン以降を切り取るなど必要)
             ->groupBy(
@@ -137,7 +137,7 @@ class TOrder extends Model
                 'company_name', //企業名
                 'phone_number' //電話番号
             ) //描画に使う値を記述
-            ->setBindings([':user_id' => $userId, ':termFrom' => $termFrom, ':termTo' => $termTo])
+            ->setBindings(['user_id' => $userId, 'termFrom' => $termFrom, 'termTo' => $termTo])
             ->paginate($maxCountPerPage);
         return $orderHistoryData;
     }
