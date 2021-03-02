@@ -38,10 +38,10 @@ class OrderController extends Controller
         // ログイン中のユーザー情報取得
         $user = Auth::user();
         // 履歴一覧データの取得
-        dd($user);
         if ($user->id) {
             $orderHistoryData = TOrder::getBaseOrder($user->id, $maxCountPerPage, $termFlg['term']);
         }
+        dd($user);
         // 3ヶ月or全件 表示ボタン出しわけ
         if ($termFlg['term']) {
             $showAllBtn = true;
