@@ -15,7 +15,7 @@ class OrderController extends Controller
     {
         // 初期値
         $data = [];
-        $termFlg = array(
+        $termFlg = array(  //3ヶ月表示切り替えフラグ。デフォルト値はfalse
                             'term' => false,
                         );
         $deleteResult = '';
