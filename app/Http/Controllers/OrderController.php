@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\TOrder; //モデル呼び出し
+// use Illuminate\Support\Facades\DB;
 
 class OrderController extends Controller
 {
@@ -13,6 +14,7 @@ class OrderController extends Controller
      */
     public function showOrderHistory(Request $request)
     {
+        return view('order.order_history_fix');
         // 初期値
         $data = [];
         $termFlg = array(  //3ヶ月表示切り替えフラグ。デフォルト値はfalse
@@ -38,9 +40,13 @@ class OrderController extends Controller
         // ログイン中のユーザー情報取得
         $user = Auth::user();
         // 履歴一覧データの取得
+        // DB::enableQueryLog();
         if ($user->id) {
             $orderHistoryData = TOrder::getBaseOrder($user->id, $maxCountPerPage, $termFlg['term']);
         }
+        // dd(DB::getQueryLog());
+
+
         // 3ヶ月or全件 表示ボタン出しわけ
         if ($termFlg['term']) {
             $showAllBtn = true;
