@@ -1,6 +1,6 @@
 <header>
     <img class="header_logo" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
-    <h1>
+    <h1 class="header_title">
         <a href="/">MeetMeat</a>
     </h1>
     @if (Auth::check())

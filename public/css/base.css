@@ -439,5 +439,15 @@
         .home-right h2 {
             font-size: 28px;
         }
+        .header_title{
+            font-size: 24px;
+        }
+        .header_logo{
+            width: 35px;
+            height: 35px;
+        }
+        header li{
+            font-size: 12px;
+        }
     }
     
