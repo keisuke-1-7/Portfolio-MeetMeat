@@ -93,6 +93,10 @@ class TOrder extends Model
     {
         $termTo = date("Y-m-d 23:59:59"); //todays date
         $termFrom   = date('Y-m-d 00:00:00', strtotime("-3 month")); //before 3 month
+        $bindValues = [':user_id'=>$userId];
+            if ($termFlg) {
+                array_merge( $bindValues, array(':termFrom'=>$termFrom), array(':termTo'=>$termTo));
+            }
         $orderBaseSql = DB::table('t_orders as base')
             ->join('t_orders_details as detail', 'base.id', '=', 'detail.order_id')
             ->select(

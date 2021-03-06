@@ -37,12 +37,10 @@
             Concept
         </div>
 
-        <div class="container justify-content-center before_login_container" >
+        <div class="container justify-content-center text-center before_login_container" >
             <div class="row mt-5 mb-5">
                 <div class="col-md-6">
-                    <div class="">
-                        <img class="home_logo" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
-                    </div>    
+                        <img class="home_logo col-md-12 p-0" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
                 </div>
                 <div class="col-md-6">
                     <div class="home-right col-md-12">
