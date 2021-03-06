@@ -70,7 +70,7 @@
 
             <div class="row mt-5 mb-5">
                 <div class="col-md-6 col-sm-12 col-xs-12">
-                    <div class="home-right col-md-12">
+                    <div class="home-right">
                         <h3>コロナ渦での消費者の鬱憤</h3>
                         <h5 class="mt-5 mb-5 before_login_concept_text">
                             生産者を救いたい反面、世の人たちは身動きが取れずに鬱憤が溜まっていると考えました。
