@@ -4,8 +4,10 @@
     <main class="container position-absolute" style="top: 50%;left: 50%;transform: translate(-50%, -50%);">
         <div class="" >
             <div class="row">
-                <img class="home_logo" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
-                <div class="home-right col-md-6 ml-5">
+                <div class="col-md-6 text-center">
+                    <img class="home_logo" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
+                </div>
+                <div class="home-right col-md-6">
                     <h3>ご利用ありがとうございます</h3>
                     <h3 class="mt-5">今食べたいお肉と出会いましょう</h3>
                     <div class="text-center">
