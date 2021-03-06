@@ -12,7 +12,7 @@
                     あなたの欲望通りの肉を提供します
                 </p>
             </div>
-            <div class="before_login_right col-md-6 col-sm-12 col-xs-12">
+            <div class="before_login_right col-md-6 col-sm-12 col-xs-12 text-center">
                 <img class="top_meat_image" src="{{ asset('/meet_images/meat_main.jpg') }}" alt="">
             </div>
         </div>
@@ -20,14 +20,14 @@
             <span class="before_login_subtitle">高級肉専門 ショッピングサイト</span>
         </div>
 
-        <div class="login-link row justify-content-center mt-5">
-            <div class="login-link-content col-md-6 col-sm-10 col-xs-10 text-center">
-                <h4>まだアカウントをお持ちでない方はこちら</h4>
+        <div class="login-link row mt-5">
+            <div class="login-link-content col-md-6 col-sm-12 col-xs-12 text-center">
+                <h4>アカウントをお持ちでない方はこちら</h4>
                 <div class="mt-3">
                 {!! link_to_route('signup', '新規登録', [], ['class' => 'btn btn-border']) !!}
                 </div>
             </div>
-            <div class="login-link-content col-md-6 col-sm-10 col-xs-10 text-center ">
+            <div class="login-link-content col-md-6 col-sm-12 col-xs-12 text-center ">
                 <h4>すでにアカウントをお持ちの方はこちら</h4>
                 <div class="mt-3">
                 {!! link_to_route('login', 'ログイン', [], ['class' => 'btn btn-border']) !!}
@@ -40,9 +40,9 @@
         </div>
 
         <div class="container justify-content-center text-center before_login_container" >
-            <div class="row mt-5 mb-2">
-                <div class="col-md-6">
-                        <img class="home_logo col-md-8 col-sm-10 col-xs-8 p-0" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
+            <div class="row before_login_concept_content mt-5">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                        <img class="home_logo col-md-8 col-sm-7 col-xs-7 p-0" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
                 </div>
                 <div class="col-md-6">
                     <div class="home-right col-md-12 col-sm-12 col-xs-12">
