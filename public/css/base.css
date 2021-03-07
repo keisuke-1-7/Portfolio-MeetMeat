@@ -406,6 +406,12 @@
         .before_login_subtitle {
             font-size: 30px;
         }
+        .home-right{
+            margin-top: 50px;
+        }
+        .home-left{
+            margin-top: 250px;
+        }
     }
     
     @media (max-width: 544px) {
@@ -440,7 +446,8 @@
             font-size: 24px;
         }
         .header_title{
-            font-size: 24px;
+            font-size: 20px;
+            margin: auto 0 auto 10px;
         }
         .header_logo{
             width: 35px;
@@ -451,6 +458,19 @@
         }
         .nav-link{
             padding: 8px 4px 8px 0;
+        }
+        .home-left{
+            margin-top: 200px;
+        }
+        .home_logo{
+            width: 200px;
+            height: 200px;
+        }
+        .home-right{
+            margin-top: 50px;
+        }
+        .home-right h3{
+            font-size: 24px;
         }
     }
     
