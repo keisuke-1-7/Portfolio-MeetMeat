@@ -449,5 +449,8 @@
         header li{
             font-size: 12px;
         }
+        .nav-link{
+            padding: 8px 4px 8px 0;
+        }
     }
     
