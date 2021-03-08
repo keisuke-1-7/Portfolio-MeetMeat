@@ -32,6 +32,7 @@
                 <div class="mt-3">
                 {!! link_to_route('login', 'ログイン', [], ['class' => 'btn btn-border']) !!}
                 </div>
+                <h4 class="text-danger mt-3">テストはこちらからどうぞ</h4>
             </div>
         </div>
 
