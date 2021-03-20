@@ -555,7 +555,8 @@
             margin-bottom: 50px;
         }
         .home-right h3 {
-            font-size: 24px;
+            font-size: 20px;
+            margin-top: 20px;
         }
         .header_title{
             font-size: 20px;
@@ -580,9 +581,6 @@
         }
         .home-right{
             margin-top: 50px;
-        }
-        .home-right h3{
-            font-size: 24px;
         }
     }
     
