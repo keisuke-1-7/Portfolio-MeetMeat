@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Storage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -56,12 +56,14 @@ class BackProductController extends Controller
         $this->validate($request, CreateProductRequest::rules());
         $productImage = $request->product_image;
         if ($productImage) {
+            $path = Storage::disk('s3')->put('meetmeat-storage', $productImage, 'public');
+            $productImagePath = Storage::disk('s3')->url($path);
             //画像ファイルの名前がかぶらないようにタイムスタンプで一意のファイル名を取得する(今回は使用しない)
             // $fileName = time() . $productImage->getClientOriginalName();
             //上記の代わりに一意のファイル名を自動生成しつつ保存し、かつファイルパス（$productImagePath）を生成
-            $productImagePath = $productImage->store('public/uploads');
+            // $productImagePath = $productImage->store('public/uploads');
         } else {
-            $productImagePath = "";
+            $path = "";
         }
         
         $user = Auth::user();
