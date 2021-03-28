@@ -7,7 +7,7 @@
             <div class="row">
                 <div class="col-md-6 iteminfo-main">
                     <div class="">
-                        <img class="mt-5 ml-3" src="{{ Storage::url($product->product_image) }}" alt="" width="90%" height="auto">
+                        <img class="mt-5 ml-3" src="{{ $product->product_image }}" alt="" width="90%" height="auto">
                     </div>
                 </div>
                 <div class="col-md-6 iteminfo-main">

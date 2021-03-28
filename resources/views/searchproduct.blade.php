@@ -62,7 +62,7 @@
 					<td>{{ $product->product_name }}</td>
 					<td>{{ $product->category->category_name }}</td>
 					<td>{{ $product->price }}円</td>
-					<td><img class="product_image" src="{{ Storage::url($product->product_image) }}" alt="" width="150px" height="100px"></td>
+					<td><img class="product_image" src="{{ $product->product_image }}" alt="" width="150px" height="100px"></td>
 					<td>
 						{!! link_to_route('iteminfo', '商品詳細', ['id' => $product->id ], ['class' => 'btn btn-primary
 						btn-md']) !!}
