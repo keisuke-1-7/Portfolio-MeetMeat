@@ -13,8 +13,8 @@ class M_UsersTableSeeder extends Seeder
     {
         DB::table('m_users')->insert([
             'password' => bcrypt('sample1'),
-            'last_name' => '坂本',
-            'first_name' => '健',
+            'last_name' => 'sample',
+            'first_name' => '1',
             'zipcode' => '1111111',
             'prefecture' => '北海道',
             'municipality' => '札幌',
@@ -28,8 +28,8 @@ class M_UsersTableSeeder extends Seeder
         ]);
         DB::table('m_users')->insert([
             'password' => bcrypt('sample2'),
-            'last_name' => '宮代',
-            'first_name' => '邦夫',
+            'last_name' => 'sample',
+            'first_name' => '2',
             'zipcode' => '2222222',
             'prefecture' => '熊本県',
             'municipality' => '熊本市',
@@ -44,8 +44,8 @@ class M_UsersTableSeeder extends Seeder
 
         DB::table('m_users')->insert([
             'password' => bcrypt('sample1'),
-            'last_name' => '神田',
-            'first_name' => '彩香',
+            'last_name' => 'sample',
+            'first_name' => '3',
             'zipcode' => '3333333',
             'prefecture' => '神奈川県',
             'municipality' => '横浜市',
