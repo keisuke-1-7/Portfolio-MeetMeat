@@ -1,72 +1,186 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+## 1.アプリ名：MeetMeat（Portfolioサイト）
+#### サービス内容
+高級肉専門ショッピングサイト
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+![MeetMeatイメージ画像](/meetmeat_top.png)
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 2.Concept
+#### コロナ禍での高級肉生産者を救う
+コロナ禍において飲食店などの外食産業は危機的状況にあり、それと同時に生産者も大きな影響を受けていると考えられます。
+また、一般的な食材はスーパーなどの小売に流れることが予想されますが、高級食材（肉）は行き場を失い冷凍貯蔵が増える一方の状況です。
+当アプリではこの現状に着目し、「高級肉の畜産農家を救う」をコンセプトとしております。
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## 3.制作に至る背景
+#### 3.1.高級肉の行き先
+私の妻は管理栄養士として給食センターに勤務しており、「今、給食にはA5ランクの牛肉が提供されている」という話を聞きました。
+というのも、昨今の状況により高級肉の飲食店への提供が滞っているとのことで、行き場を失った高級肉が給食センターに流れているとのことでした。
+これは明らかなニーズの不一致であり、価格もおそらく適性ではないと推測されます。
 
-## Learning Laravel
+#### 3.2.コロナ禍の消費者のニーズ
+コロナ禍において、世の人たちは身動きが取れずに鬱憤が溜まっていることが予想されます。
+家庭での食事が増える中、消費者たちが「少しくらいは家で贅沢したい」という欲求に着目しました。
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+これらのニーズの不一致の改善や高級肉の行き先を確保できるサービスを考え、当アプリの制作に至りました。
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
 
-## Laravel Sponsors
+## 4.使用技術及び環境
+#### 4.1.バックエンド
+・PHP7.2
+・Laravel5.8
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+#### 4.2.フロントエンド
+・HTML5/CSS3
+・Bootstrap4
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
+#### 4.3.インフラ
+・heroku
 
-## Contributing
+#### 4.4.その他使用技術
+・Docker on Vagrant
+・MySQL
+・Git/GitHub
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Security Vulnerabilities
+## 5.機能一覧
+#### 5.1.主要機能
+ーーーメイン機能ーーー
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+・ログイン/ログアウト
 
-## License
+・ユーザー新規登録機能
 
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+・商品検索
+
+・カート機能
+
+・注文履歴
+
+・ユーザ情報照会
+
+・ユーザ情報編集/退会
+
+・Stripe決済
+
+ーーー管理者側ーーー
+
+・商品登録
+
+・画像アップロード
+
+・商品情報編集/削除
+
+#### 5.2.その他
+
+・レスポンシブWebデザイン（一部）
+
+・ハンバーガーメニュー
+
+## 6.機能紹介 -管理者側（生産者）-
+#### 商品登録と商品編集
+①管理者としてログインした場合に限り、出品したい商品を画像付きで登録することができます。
+
+②登録した商品のデータ修正を行うことができます。
+
+③登録した商品は商品検索画面で確認することができます。
+
+![機能紹介-管理者-](/portfolio_layout.001.jpeg)
+
+
+## 7.機能紹介 -ユーザー側（消費者）-
+#### 7.1.ログイン・ユーザ新規登録
+①新しく利用を開始する場合に新規ユーザー登録を行うことができます。
+
+②既に登録しているユーザーは登録したメールアドレスとパスワードでログインすることができます。
+
+③ログインするとAfterログイン画面へ遷移します。
+
+![機能紹介-ユーザー-](/portfolio_layout.002.jpeg)
+#### 7.2.トップ画面からの機能各種
+①登録したユーザ情報の修正を行うことができます。
+
+②商品一覧画面から商品を検索することができます。
+
+③注文履歴を表示させることができます。
+
+④Sessionを用いたカート機能によってカート内商品一覧を参照することができます。
+
+![機能紹介-ユーザー-](/portfolio_layout.003.jpeg)
+#### 7.3.ショッピング機能
+①商品一覧から購入したい商品の詳細画面へ飛びます。
+
+②商品詳細画面にて数量を選択し、「カートへ」ボタンを押すとカート内へ商品が追加されます。
+
+③商品を購入する場合は「注文を確定する」ボタンを押すとストライプ決済の入力が始まります。（買い物を続けることもできます）
+
+④入力し、購入に成功すると注文番号が表示された購入完了画面が表示されます。（今回はデモ機能です）
+
+![機能紹介-ユーザー-](/portfolio_layout.004.jpeg)
+
+
+## 8.工夫した点
+#### 8.1当アプリが必要とする要素
+当アプリ作成時は以下のような点に留意しながら作成しました。
+
+①商品は高級肉であるため、高級感が漂うUIにすること
+
+②消費者が購入したくなるように画像を取り入れること
+
+③ショッピングアプリであるため、決済機能は必要
+
+#### ①高級感
+サイト全体を黒で統一し、文字を明朝体で統一するなど、高級感が漂うように配慮いたしました。
+
+#### ②画像アップロード
+消費者の目を引くためには画像は必須だと考え、画像アップロード機能の追加を行いました。
+
+#### ③決済機能
+ショッピングアプリであるため決済機能は必須と考え、より実用化を意識して取り組みました。
+
+#### 8.2 今後の展望
+今後、機能追加を考えるのであれば以下のようなものを考えております
+
+・高級肉の元々の納品先の掲示
+
+生産者が登録したお肉は、「元々どのような高級店に納品されていたのか」という情報を商品欄に掲示することを考えております。
+そうすることで、消費者は「あの有名店のお肉が食べられる」という特別感が増すのではないかと推測しており、
+実際に購入いただいて満足を得られた場合には「次はあの店に実際に食べに行こう」という行動に繋がるのではと考えております。
+
+
+## 9.苦労した点
+#### 9.1.画像アップロード機能 
+画像アップロード機能を実装する際に、画像データ及び画像のファイルパスはどこに保存するのか？ということについての理解に苦しみました。
+自分で内容を整理しながらなんとか実装完了することができました。このことについて悩んだことでLaravelのディレクトリ構成やシンボリックリンクについての理解が深まりました。
+画像アップロードの仕組みを理解するのに時間がかかったため、Qiita記事にまとめております。
+[[Qiita記事リンク](https://qiita.com/kei_Q/items/62cb8747280266956100)]
+
+#### 9.2.Sessionを用いたカート機能
+ショッピングアプリであるため、カート機能を実装する必要がありました。
+そもそもSessionに関して概念的な理解が浅かったこともありますが、いざ実装となるとさらに手が動かず、「セッションデータを保存して、それを引き出す」という作業と概念を一致させるのに時間がかかりました。
+一つ一つのコードの動きを捉えることでなんとかこの難局を乗り越えることができ、セッションデータの動きを掴むことができました。
+また、このことについてもQiita記事にまとめております。
+[[Qiita記事リンク](https://qiita.com/kei_Q/items/04e8217f9ec4f6c3532a)]
+
+#### 9.3.AWSへのデプロイ
+現在Web系の企業ではクラウドはAWSの使用が主流とあったため、都度調べながら約2週間かけてAWSへデプロイを完了させました。
+クラウドの中での構成イメージや、サーバーやIPアドレスの知識が足りず非常に難航しました。
+また、デプロイ自体は成功しましたが、後にセキュリティが甘かったことが原因で不正アクセスが確認されました。
+早急にアカウントを削除したことで大事には至らずに済みました。
+セキュリティの重要性や怖さを身を持って体験し、今後実務で同じミスをしないよう、日々学習を続けております。
+
+## 10.もう一度このアプリを作るなら...
+同様のアプリを作成する際に気をつけたいこととしては、やはり設計段階における用件定義やデータベース設計です。
+例えばデータベースにおける文字が一文字違ったり、単数形・複数形が間違っていると、その影響範囲が非常に多かったことが挙げられます。
+この場合、見直した際にコードの可読性は下がりますし、修正も広範囲に及びます。また用件定義も同様です。
+設計工程がいかに大事かを身にしみて感じた開発でした。
+
+
+## 11.最後に
+以上、簡単ではございますが当アプリの解説となります。
+共同開発講座でECサイトの骨組みのみを作成し、自分でブラッシュアップを行ったのがMeetMeatです。
+自分で機能を追加していくことで確かな成長を感じましたし、これからも自己研鑽を続けていきます。
+
+貴重な学習機会をいただいた共同開発講座における講師の方々、チームメイトの皆様方には深く感謝いたします。
+
+最後ご覧いただき、誠にありがとうございました。
