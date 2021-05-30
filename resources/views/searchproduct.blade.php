@@ -13,7 +13,7 @@
 				<div class="col-sm">
 					<form method="GET" action="{{ route('searchproduct')}}">
 						<div class="form-group row">
-							<label class="col-sm-2 col-form-label search-text-font">商品名</label>
+							<label class="col-sm-2 col-form-label">商品名</label>
 							<!--入力-->
 							<div class="col-sm-5">
 								<input type="text" class="form-control" name="searchWord" value="{{ $searchWord }}">
@@ -24,7 +24,7 @@
 						</div>
 						<!--プルダウンカテゴリ選択-->
 						<div class="form-group row">
-							<label class="col-sm-2 search-text-font">商品カテゴリ</label>
+							<label class="col-sm-2">商品カテゴリ</label>
 							<div class="col-sm-3">
 								<select id="categoryId" name="categoryId" class="form-control"
 									value="{{ $categoryId }}">
@@ -50,10 +50,9 @@
 			<table class="table table-hover">
 				<thead style="background-color: #bbb9b9">
 					<tr>
-						<th>商品名</th>
+						<th style="width:50%">商品名</th>
 						<th>商品カテゴリ</th>
 						<th>価格</th>
-						<th>商品画像</th>
 						<th></th>
 					</tr>
 				</thead>
@@ -62,10 +61,9 @@
 					<td>{{ $product->product_name }}</td>
 					<td>{{ $product->category->category_name }}</td>
 					<td>{{ $product->price }}円</td>
-					<td><img class="product_image" src="{{ Storage::url($product->product_image) }}" alt="" width="150px" height="100px"></td>
 					<td>
 						{!! link_to_route('iteminfo', '商品詳細', ['id' => $product->id ], ['class' => 'btn btn-primary
-						btn-md']) !!}
+						btn-sm']) !!}
 					</td>
 				</tr>
 				@endforeach

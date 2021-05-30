@@ -10,7 +10,6 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <div class="cal-xs-4">
-                            <div class="text-danger">テスト用：sample2@sample.com</div>
                             {!! Form::label('email', 'メールアドレス', ['class' => 'mt-2']) !!}
                             {!! Form::email('email', old('email'), ['class' => 'form-control']) !!}
                         </div>
@@ -26,7 +25,6 @@
                 <div class="form-group">
                     <div class="row justify-content-center">
                         <div class="cal-xs-4">
-                            <div class="text-danger">テスト用：sample2</div>
                             {!! Form::label('password', 'パスワード', ['class' => 'mt-2']) !!}
                             {!! Form::password('password', ['class' => 'form-control']) !!}
                         </div>

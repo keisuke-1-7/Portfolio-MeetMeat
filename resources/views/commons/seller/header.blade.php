@@ -1,13 +1,9 @@
 <header>
-    <img class="header_logo" src="{{ asset('/meet_images/meet_logo.png') }}" alt="">
     <h1>
-        <a href="/">MeetMeat
-        <span class="header_title d-inline">管理者用ページ</span>
-        </a>
-        
+        <a href="/">やんばるエキスパート 出品者用画面</a>
     </h1>
     @if (Auth::check())
-        <p class="header-user-name">{{ !empty(Auth::user()) ? Auth::user()->last_name . Auth::user()->first_name : 'ユーザー' }} さん</p>
+        <p>{{ !empty(Auth::user()) ? Auth::user()->last_name . Auth::user()->first_name : 'ユーザー' }} さん</p>
         <nav>
             <ul>
                 <li class="nav-item">{!! link_to_route('seller_search', '商品検索', [], ['class' => 'nav-link']) !!}</li>

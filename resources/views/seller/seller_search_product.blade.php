@@ -47,13 +47,11 @@
             <div class="productTable">
             
             <table class="table table-hover">
-                <thead class="text-white search-table-color">
+                <thead class="text-white bg-dark">
                     <tr>
                         <th>商品名</th>
                         <th>商品カテゴリ</th>
                         <th>価格</th>
-                        <th>商品写真</th>
-                        <th></th>
                     </tr>
                 </thead>
                 @foreach($products as $product)
@@ -61,7 +59,6 @@
                     <td>{{ $product->product_name }}</td>
                     <td>{{ $product->category->category_name }}</td>
                     <td>{{ $product->price }}円</td>
-                    <th><img class="product_image" src="{{ Storage::url($product->product_image) }}" alt="" width="150px" height="100px"></th>
                     <td>{!! link_to_route('back_product_edit', '修正', [$product->id], ['class' => 'btn btn-primary mt-2']) !!}</td>
                 </tr>
                 @endforeach
