@@ -16,7 +16,7 @@ return [
     'email' => ':attributeが正しくありません。',
     'max' => [
             'string' => ':attributeは:max文字以内で入力してください。',
-    ],
+        ],
     'numeric' => ':attributeは数字で入力してください。',
     'alpha_num' => ':attributeは半角英数字で入力してください。',
     'confirmed' => ':attributeを再入力してください。もしくは確認用パスワードが一致しません。',
@@ -74,6 +74,6 @@ return [
         'saleStatusId' => '販売状態',
         'productStatusId' => '商品状態',
         'description' => '商品説明',
-        'password'=>'パスワード',
+        'password'=>'パスワード'
     ],
 ];

@@ -14,13 +14,13 @@
                     <div class="px-3 py-1">
                         <div class="col-12 row px-3">
                             <div class="col-2">
-                                <span id="postal_code cartlist-text">
+                                <span id="postal_code">
                                     @if(Auth::check())
                                     {!! Auth::user()->zipcode !!}
                                     @endif
                                 </span>
                             </div>
-                            <div class="col-8 cartlist-text" id="address">
+                            <div class="col-8" id="address">
                                 @if(Auth::check())
                                 {!! Auth::user()->prefecture !!}
                                 {!! Auth::user()->municipality !!}
@@ -31,12 +31,12 @@
                         </div>
                         <div class="col-12 row px-3">
                             <div class="col-2"></div>
-                            <div class="col-8 cartlist-text" id="name">
+                            <div class="col-8" id="name">
                                 @if(Auth::check())
                                 {!! Auth::user()->last_name !!}
                                 {!! Auth::user()->first_name !!}
                                 @endif
-                                <span class="ml-1 cartlist-text">様</span>
+                                <span class="ml-1">様</span>
                             </div>
                         </div>
                     </div>
@@ -45,7 +45,7 @@
                 <div class="mt-5">
                     <table class="table border-dark">
                         <thead>
-                            <tr class="d-flex border-bottom border-dark cartlist-text">
+                            <tr class="d-flex border-bottom border-dark">
                                 <th scope="col" class="col-1 px-0 py-1 text-center">No</th>
                                 <th scope="col" class="col-2 px-0 py-1 text-center">商品名</th>
                                 <th scope="col" class="col-2 px-0 py-1 text-center">商品カテゴリ</th>
@@ -57,7 +57,7 @@
                         </thead>
                         @foreach($cartData as $cartNumber => $data)
                         <tbody style="overflow-y:auto;max-height:400px;display:block">
-                            <tr class="d-flex cartlist-text">
+                            <tr class="d-flex">
                                 <th scope="row" class="col-1 px-0 text-center">{{ $cartNumber + 1 }}</th>
                                 <td class="col-2 px-0 text-center">{{ $data['product']->product_name }}</td>
                                 <td class="col-2 px-0 text-center">{{ $data['product']['category']->category_name }}
@@ -83,7 +83,7 @@
                         @endforeach
                     </table>
                     <!-- 合計 -->
-                    <div class="col-12 row justify-content-end m-0 p-0 cartlist-text">
+                    <div class="col-12 row justify-content-end m-0 p-0">
                         <div class="col-2 text-center px-0">合計</div>
                         <div class="col-2 text-center px-0">
                             @php
@@ -99,27 +99,9 @@
                         <button class="btn btn-info mx-3">
                             {!! link_to_route('show', '買い物を続ける', [], ['class' => 'text-white d-inline']) !!}
                         </button>
-                        <div class="content">
-                            <form action="{{ asset('charge') }}" method="POST">
-                                {{ csrf_field() }}
-                                    <input type="hidden" name="totalPrice" value={{$totalPrice}}>
-                                        <script
-                                                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-                                                data-key="{{ env('STRIPE_KEY') }}"
-                                                data-amount = {{ $totalPrice }}
-                                                data-name="Stripe Demo"
-                                                data-label="注文を確定する"
-                                                data-description="Online course about integrating Stripe"
-                                                data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
-                                                data-locale="auto"
-                                                data-currency="JPY">
-                                        </script>
-                                        <script>
-                                            document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
-                                        </script>
-                                        <button type="submit" class="btn btn-primary mx-3">注文を確定する</button>
-                            </form>
-                        </div>
+                        <button class="btn btn-primary mx-3">
+                            {!! link_to_route('checkout', '注文を確定する', [], ['class' => 'text-white d-inline']) !!}
+                        </button>
                     </div>
                 </div>
             </div>

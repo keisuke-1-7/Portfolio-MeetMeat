@@ -5,13 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Cashier\Billable;
 
 class User extends Authenticatable
 {
     protected $table = 'm_users';
     use Notifiable;
-    use Billable;
 
     /**
      * The attributes that are mass assignable.
