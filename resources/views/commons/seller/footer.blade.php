@@ -1,4 +1,4 @@
 <footer>
-    <h1>やんばるエキスパート 出品者用画面</h1>
-    <p>© 2020 QuestAcademia, All rights reserved</p>
+    <h1>MeetMeat</h1>
+    <p>© 2021 MeetMeat, All rights reserved</p>
 </footer>

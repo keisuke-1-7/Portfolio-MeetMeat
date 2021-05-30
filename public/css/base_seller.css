@@ -7,9 +7,9 @@
     body {
         margin: 0;
         padding: 0;
-        font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-family: serif, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "Helvetica Neue", Helvetica, Arial;
     }
-    /******全体のデザイン******/
+    /*---------------------全体のデザイン----------------------*/
     .all {
         position: relative;
         width: 100%;
@@ -31,13 +31,12 @@
         text-decoration: none;
         color: #fff;
     }
-    /******ヘッダーデザイン******/
+    /*---------------------ヘッダー----------------------*/
     header {
         width: 100%;
         padding: 10px 10px;
         z-index:10;
-        background-color: #000;
-        color: #fff;
+        background-color: #684213;
         position: fixed;
         top: 0;
         display: flex;
@@ -45,13 +44,13 @@
     }
     header h1 {
         padding: 0;
-        font-size: 20px;
-        color: #fff;
+        font-size: 40px;
+        margin: auto 0 auto 20px;
+        font-family: cursive;
         font-weight: bold;
     }
     header p {
         position: absolute;
-        color: #fff;
         top: 0;
         right: 0;
         margin-right: 10px;
@@ -69,6 +68,25 @@
     }
     header nav {
         margin: 0 0 0 auto;
+    }
+
+    .header-user-name{
+        color: white;
+    }
+
+    .header_logo{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        margin: auto 0 auto 10px;
+    }
+
+    .header_title {
+        padding: 0;
+        font-size: 30px;
+        margin: auto 0 auto 20px;
+        font-family: cursive;
+        font-weight: bold;
     }
 
     main h2 {
@@ -102,20 +120,21 @@
         background-color: #000;
     }
 
-    /****フッター*******/
+    /*---------------------フッター----------------------*/
     footer {
         width: 100%;
         padding: 5px 10px;
-        background-color: #000;
-        color: #fff;
-        position: fixed;
+        background-color: #684213;
+        position: relative;
         bottom: 0;
+        color: #f0eeee;
         z-index: 1000;
     }
     footer h1 {
         padding: 0;
-        font-size: 20px;
+        font-size: 30px;
         font-weight: bold;
+        font-family: cursive;
     }
     footer p {
         text-align: right;
@@ -123,7 +142,7 @@
         margin: 0 auto;
     }
 
-    /***main******/
+    /*---------------------main----------------------*/
     .row{
         font-size: 14px;
         line-height: 30px;
@@ -158,4 +177,8 @@
     }
     #address-text{
         line-height: 15px !important;
+    }
+
+    .search-table-color{
+        background-color: #ac8b62;
     }

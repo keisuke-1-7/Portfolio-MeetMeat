@@ -18,7 +18,7 @@
     </div>
     <div class="row mt-5 mb-5">
         <div class="col-sm-5 mx-auto">
-            {!! Form::open(['route' => ['back_product_store']]) !!}
+            {!! Form::open(['route' => 'back_product_store', 'enctype'=>'multipart/form-data']) !!}
                 <div class="form-group-sm">
                     {!! Form::label('productName', '商品名', ['class' => 'mt-2 mb-0']) !!}
                     <div class="pl-3">
@@ -97,6 +97,19 @@
                         @endif
                     </div>
                 </div>
+
+
+                <div class="form-group-sm">
+                    {!! Form::label('image', '商品画像', ['class' => 'd-block mt-2 mb-0']) !!}
+                    <input type="file" name="product_image" value="" class="ml-3 mr-2 d-inline">
+                    <div class="mt-1 text-right text-danger">
+                        @if($errors->has('product_image'))
+                                {{ $errors->first('product_image') }}
+                        @endif
+                    </div>
+                </div>
+
+
                 <div>
                     <div class="w-100">
                         <div class="text-center mt-5">
